@@ -32,7 +32,7 @@ if(isset($_POST['submit']))
 </p>
 <p class="description">
 	<strong>
-		2. Apply shortcodes to your existing Login & Registration pages. Please avoid putting this form in modals.
+		2. If above option not working, Apply shortcodes to your existing Login & Registration pages. Please avoid putting this form in modals.
 	</strong>
 </p>
 
@@ -50,7 +50,4 @@ if(isset($_POST['submit']))
 	<strong style="color: red">Note: If your site is not running on localhost, make sure to have TLS enabled.</strong>
 </p>
 
-add_shortcode("passwordless-login" , "passwordless_login_function")
-function passwordless_login_function () {
-	include_once PLUGIN_DIR_PATH."passwordlessPlugin\shortcode\loginShortcode.php"
-}
+

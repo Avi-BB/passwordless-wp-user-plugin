@@ -78,3 +78,4 @@ function passwordless_register_function()
   include_once PLUGIN_DIR_PATH. './shortcode/registerShortcode/registerShortcode.php';
   
 }
+
