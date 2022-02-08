@@ -22,9 +22,7 @@ if(isset($_POST['submit']))
 <p class="description"><strong>1. Generate Login or Registration pages.</strong></p>
 <p>
 <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
-	<?php
-	wp_nonce_field("loginid_dw_settings_group-options");
-	?>
+
 	<input type="hidden" name="action" value="loginid_dw_generate_page">
 	<input type="submit" name="submit" class="button button-secondary" value="Generate Login Page">
 	<input type="submit" name="submit" class="button button-secondary" value="Generate Register Page">

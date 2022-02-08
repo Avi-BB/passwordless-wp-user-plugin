@@ -13,8 +13,10 @@
  //constants
  define ("PLUGIN_DIR_PATH" , plugin_dir_path(__FILE__));
  define ("PLUGIN_URL" , plugins_url());
+ if (!defined('ABSPATH')) exit;
+ require_once(__DIR__ . '/passwordless_user_flow.php');
 
-
+ register_activation_hook(__FILE__, 'plugin_activated');
 
  
 function add_my_custom_menu()
@@ -64,18 +66,5 @@ function add_new_function2()
 }
 
 
-add_shortcode ("passwordless-login" , "passwordless_login_function");
 
-function passwordless_login_function()
-{
-  include_once PLUGIN_DIR_PATH.'./shortcode/loginShortcode/loginShortcode.php';
-  
-}
-add_shortcode ("passwordless-register" , "passwordless_register_function");
-
-function passwordless_register_function()
-{
-  include_once PLUGIN_DIR_PATH. './shortcode/registerShortcode/registerShortcode.php';
-  
-}
 
