@@ -48,7 +48,7 @@
 		
 	}
 
-	#submit-btn {
+	.submit-btn {
 		background-color: #00a0d2;
 		color: white;
 		border: none;
@@ -147,7 +147,7 @@ if (isset($_POST['submit2'])) {
 			</div>
 		</div>
 		<div style="text-align:center">
-		<input id="submit-btn" type="submit" value="submit" name="submit">
+		<input class="submit-btn" type="submit" value="submit" name="submit">
 		</div>
 	</form>
 

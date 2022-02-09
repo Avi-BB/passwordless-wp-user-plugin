@@ -71,7 +71,7 @@ function plugin_activated()
     add_shortcode("user-login", "pl_user_login_function");
     add_shortcode('user-remote-auth', 'pl_user_remote_auth');
     add_shortcode('init', 'add_base_data');
-
+    add_action('init', 'generate_pages');
     // add_action('init', 'scratchcode_create_payment_table');
 }
 

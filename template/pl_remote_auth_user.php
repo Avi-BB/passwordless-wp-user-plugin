@@ -75,14 +75,13 @@
 
 <?php
 
-global $wpdb, $base, $client, $re, $path, $lo;
+global $wpdb, $base, $client, $re, $lo;
 $sql = "SELECT * FROM wp_passwordlesstable";
 $results = $wpdb->get_results($sql);
 foreach ($results as $result) {
     $base = $result->base_url;
     $client = $result->client_id;
     $re = $result->re;
-    $path = $result->path;
     $lo = $result->lo;
 }
 ?>

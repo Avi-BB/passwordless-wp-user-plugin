@@ -12,7 +12,9 @@
       background-color: white;
       border-radius: 0.2rem;
       padding: 2rem;
-
+      width: 40%;
+      margin: 0 auto;
+      box-shadow: 0 0 5px grey;
     }
 
     .content {
@@ -27,15 +29,8 @@
       text-align: center;
     }
 
-    .border-bottom {
-      border-bottom: 3px solid #006dff;
-      width: 50%;
-      text-align: left;
-      margin-bottom: 10px;
-    }
 
     .reg-control {
-      border: 1px solid #006dff !important;
       width: 100%;
       margin: 10px !important;
       border-radius: 2px !important;
@@ -61,10 +56,9 @@
       margin: 0px 10px;
     }
 
-    #submit-btn {
+    .submit-btn {
       background-color: #00a0d2;
       color: white;
-      border: none;
       border-radius: 0.2rem;
       padding: 0.3rem 0.7rem;
       font-size: 1.2rem;
@@ -72,7 +66,10 @@
     }
 
     .app-cnd {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
       margin: 0 auto;
       text-align: center;
     }
@@ -115,7 +112,7 @@
           </form>
 
           <div id="user-login-action" style="text-align: center;">
-            <button id="submit-btn">Login</button>
+            <button class="submit-btn">Login</button>
           </div>
 
 
@@ -145,7 +142,6 @@
       $client = $result->client_id;
       $re = $result->re;
       $lo = $result->lo;
-      $path = $result->path;
     }
     ?>
     <div style="display:none">

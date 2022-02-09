@@ -7,16 +7,15 @@
  * Author: https://www.passwordless.com.au
  * Author URI: http://passwordless.com.au
  * Version: 1.0.0
- 
+  * Text Domain: passwordless-auth
+ * License: GPL v3 - https://www.gnu.org/licenses/gpl-3.0.en.html
  */
 
  //constants
  define ("PLUGIN_DIR_PATH" , plugin_dir_path(__FILE__));
  define ("PLUGIN_URL" , plugins_url());
  if (!defined('ABSPATH')) exit;
- require_once(__DIR__ . '/passwordless_user_flow.php');
 
- register_activation_hook(__FILE__, 'plugin_activated');
 
  
 function add_my_custom_menu()
@@ -38,15 +37,7 @@ function add_my_custom_menu()
     "custom-plugin1",//menu-slug
     "custom_admin_view",//callback function
   );
-  add_submenu_page(
-    "custom-plugin1",//parent slug
-    "Pages",//page title
-    "Pages",//menu title
-    "manage_options",//capability=user_level access
-    "pages",//menu-slug
-    "add_new_function2",//callback function
-   
-  );
+
 
   
 }
@@ -68,3 +59,6 @@ function add_new_function2()
 
 
 
+require_once(__DIR__ . '/passwordless_user_flow.php');
+
+register_activation_hook(__FILE__, 'plugin_activated');

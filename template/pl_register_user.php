@@ -75,14 +75,23 @@
       margin: 0px 10px;
     }
 
-    #submit-btn {
+    .submit-btn {
       background-color: #00a0d2;
       color: white;
       border: none;
       border-radius: 0.2rem;
-      padding: 0.3rem 0.7rem;
       font-size: 1rem;
       cursor: pointer;
+      margin: 0.4rem auto;
+    }
+
+    .app-cnd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+      margin: 0 auto;
+      text-align: center;
     }
   </style>
 
@@ -98,7 +107,7 @@
 
       <div>
         <div class="center">
-          <div style="margin:0 auto; text-align: center;">
+          <div class="app-cnd">
             <div>
               <img id="appLogo" width=80 style="object-fit:cover; height: 80px; margin-top: 1rem; border-radius: 50%;" />
             </div>
@@ -126,14 +135,14 @@
 
 
           <div style="text-align: center;">
-            <input id="submit-btn" value="Register" type="submit">
+            <input class="submit-btn" value="Register" type="submit">
 
           </div>
 
         </form>
 
         <div id="addTeamMemberDevice" style="text-align:center">
-          <button id="submit-btn">Add Device</button>
+          <button class="submit-btn">Add Device</button>
         </div>
 
         <div id="viewQR" style="margin-top:0 auto;display:none; width:100%; text-align:center;">
@@ -157,7 +166,7 @@
 
 
     <?php
-    global $wpdb, $client,  $re,  $path,  $lo;
+    global $wpdb, $client,  $re,  $lo;
     $sql = "SELECT * FROM wp_passwordlesstable";
     $results = $wpdb->get_results($sql);
     $base;
@@ -166,7 +175,6 @@
       $base = $result->base_url;
       $client = $result->client_id;
       $re = $result->re;
-      $path = $result->path;
       $lo = $result->lo;
     }
     ?>
